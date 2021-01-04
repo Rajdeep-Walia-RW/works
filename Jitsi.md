@@ -1,4 +1,4 @@
-# This Document only for UBUNTU 18.04
+# For UBUNTU 18.04
 
 # Uninstall 
 
@@ -11,6 +11,20 @@ apt purge nginx nginx-common
 apt purge jigasi jitsi-meet jitsi-meet-web-config jitsi-meet-prosody jitsi-meet-turnserver jitsi-meet-web jicofo jitsi-videobridge2
 apt autoremove
 ```
+
+# Open ports
+
+```bash
+ufw allow in 22/tcp &&
+ufw allow in openssh &&
+ufw allow in 80/tcp &&
+ufw allow in 443/tcp &&
+ufw allow in 4443/tcp &&
+ufw allow in 5222/tcp &&
+ufw allow in 5347/tcp &&
+ufw allow in 10000:20000/udp
+```
+
 # Set Host name 
 ```
 hostnamectl set-hostname [YOUR DOMAIN]
@@ -108,17 +122,6 @@ Enable ufw
 ufw enable
 ```
 
-Open ports
-```bash
-ufw allow in 22/tcp &&
-ufw allow in openssh &&
-ufw allow in 80/tcp &&
-ufw allow in 443/tcp &&
-ufw allow in 4443/tcp &&
-ufw allow in 5222/tcp &&
-ufw allow in 5347/tcp &&
-ufw allow in 10000:20000/udp
-```
 ```
 rm /etc/apache2/sites-enabled/000-default-le-ssl.conf 
 rm /etc/apache2/sites-enabled/000-default.conf
