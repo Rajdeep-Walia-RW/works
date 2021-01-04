@@ -184,4 +184,4 @@ PersistentKeepalive = 30
 5. You woud also find your Public Key in above section only, which you have to add back to the server.
 6. Repeat this process for adding more peers.
 
-Your WireGuard is all setuped.
+# Your WireGuard is all setuped.
