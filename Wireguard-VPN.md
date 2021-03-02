@@ -1,6 +1,6 @@
 # WireGuard Installation
 
-Before Installing WireGuard, Port 51820 should be opened.
+Before Installing WireGuard, UDP port 51820 should be opened.
 
 ## SERVER-SIDE
 
